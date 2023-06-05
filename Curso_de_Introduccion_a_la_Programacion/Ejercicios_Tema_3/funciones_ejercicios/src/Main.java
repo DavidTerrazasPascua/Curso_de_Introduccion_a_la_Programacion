@@ -5,28 +5,27 @@ public class Main {
 
     public static void main(String[] args) {
           sumar(1,2,3);
-          Coche miCoche;
-          miCoche =new Coche();
-          miCoche.setPuertas(5);
-          System.out.println(miCoche.getPuertas());
+          Coche miCoche =new Coche();
+          miCoche.incrementarPuerta();
+          System.out.println(miCoche.getCantPuertas());
         }
 
         public  static void sumar(int num1 , int num2 ,int num3){
             int suma= num1 + num2 +num3;
         }
     public static class Coche {
-        private int cantPuertas;
+        private int cantPuertas=0;
 
         public Coche() {
         }
 
-        public int getPuertas() {
+        public void incrementarPuerta(){
+            this.cantPuertas=this.cantPuertas + 1;
+        }
+        public int getCantPuertas(){
             return this.cantPuertas;
         }
 
-        public void setPuertas(int cantPuertas) {
-            this.cantPuertas = cantPuertas;
-        }
     }
 
 
