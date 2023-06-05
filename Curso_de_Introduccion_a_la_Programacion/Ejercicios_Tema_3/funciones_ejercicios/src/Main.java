@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
           sumar(1,2,3);
           Coche miCoche =new Coche();
-          miCoche.incrementarPuerta();
+          miCoche.incrementarPuertas(1);
           System.out.println(miCoche.getCantPuertas());
         }
 
@@ -19,8 +19,8 @@ public class Main {
         public Coche() {
         }
 
-        public void incrementarPuerta(){
-            this.cantPuertas=this.cantPuertas + 1;
+        public void incrementarPuertas(int cantPuertas){
+            this.cantPuertas=cantPuertas;
         }
         public int getCantPuertas(){
             return this.cantPuertas;
